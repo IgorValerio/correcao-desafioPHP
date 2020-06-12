@@ -19,11 +19,26 @@
         </ul>
     </nav>
 
-    <main>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam officia dicta ratione rem facilis, nostrum voluptatum nesciunt reprehenderit ab! Quaerat nemo perferendis porro distinctio libero odio eos cum facere exercitationem!</p>
-        <p>Assumenda voluptatem libero ab vero repudiandae? Suscipit, quo corporis. Quasi, deserunt perferendis perspiciatis possimus maxime minus aut velit non iste distinctio maiores? Nam unde cum quo vel dolorem distinctio repudiandae!</p>
-        <p>Obcaecati beatae magnam repudiandae laudantium repellendus, culpa sunt amet tenetur labore eius quibusdam molestias, temporibus iure distinctio dicta, hic a deserunt fuga cumque. Fugit id earum culpa optio, laboriosam fuga.</p>
-        <p>Iusto voluptate, hic tempore vero dolores corrupti eveniet nostrum quas dicta unde dolorum, alias optio maiores fugiat illo facilis provident explicabo vel! Sequi tenetur quisquam officiis obcaecati dolore cupiditate eaque?</p>
+    <main class="mini-container">
+ 
+        <form action="">
+            <label>
+                Nome:
+                <input type="text" name="nome" id="nome">
+            </label>
+            <label>
+                Descrição:
+                <textarea name="desc" id="desc"></textarea>
+            </label>
+            <label>
+                Preço (R$):
+                <input type="number" name="preco" id="preco" min="0" step="0.05">
+            </label>
+            <label>
+                Foto:
+                <input type="file" name="foto" id="foto" >
+            </label>
+        </form>
     </main>
 
     <footer>
