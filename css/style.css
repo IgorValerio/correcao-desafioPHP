@@ -96,3 +96,26 @@ button:hover{
     justify-content: space-between;
     margin-top: 20px;
 }
+
+.fileContainer{
+    position: relative;
+}
+
+.fileContainer input{
+    display: none;
+}
+
+.fileContainer img{
+    width: 100%;
+    display: block;
+}
+
+.fileContainer div{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    color: #fff;
+}

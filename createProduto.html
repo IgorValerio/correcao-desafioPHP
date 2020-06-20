@@ -34,8 +34,9 @@
                 Preço (R$):
                 <input type="number" name="preco" id="preco" min="0" step="0.05">
             </label>
-            <label>
-                Foto:
+            <label class="fileContainer">
+                <img src="img/no-image.png" alt="Imagem Selecionada" id="preview">
+                <div>Click para escolher uma imagem</div>
                 <input type="file" name="foto" id="foto" >
             </label>
 
@@ -49,6 +50,27 @@
     <footer>
         Desafio PHP Estruturado
     </footer>
+
+    <script>
+        (() => {
+
+            let src = document.getElementById("foto");
+            var target = document.getElementById("preview");
+
+            // Criando um objeto fileReader
+            var fr = new FileReader();
+
+            // Quando o file reader carregar o arquivo, atribua ao src da imagem
+            // o arquivo carregado
+            fr.onload = function(e) { target.src = this.result; };
+
+            // Quando houver alteração no input file fazer com que o
+            // file reader leia o arquivo selecionado
+            src.addEventListener("change", function() {
+                fr.readAsDataURL(src.files[0]);
+            });
+        })();
+    </script>
 
 </body>
 </html>
