@@ -116,11 +116,15 @@ button:hover{
 }
 
 .fileContainer div{
+    
+}
+
+.fileContainer .errorUpload{
     position: absolute;
-    bottom: 0;
+    top: 0;
     text-align: center;
     padding: 10px 20px;
     background-color: rgba(0, 0, 0, 0.3);
     width: 100%;
-    color: #fff;
+    color: #FFFF00;
 }

@@ -1,4 +1,7 @@
 <?php 
+    // echo '<pre>';
+    // print_r($_FILES);
+    // echo '</pre>';
 
     //Trazendo funções validadoras para dentro desse script
     include("includes/validadores.php");
@@ -6,6 +9,7 @@
     //Definindo variaveis de validação
     $nomeOk = true;
     $precoOk = true;
+    $fotoOk = true;
 
     //Definindo variaveis com valores dos campos
     $nome = "";
@@ -21,8 +25,10 @@
         //Verificando campos
         $nomeOk = nomeProdutoOk($_POST['nome']);
         $precoOk = precoProdutoOk($_POST['preco']);
+        $fotoOk = uploadArquivosOk($_FILES['foto']);
+
         //Perguntando se os campos estão ok
-        if ($nomeOk && $precoOk) {
+        if ($nomeOk && $precoOk && $fotoOk) {
             
             die('Ok! Tudo certo para salvar o produto');
 
@@ -36,7 +42,7 @@
 
     <main class="mini-container">
  
-        <form action="" method="POST">
+        <form action="" method="POST" enctype="multipart/form-data">
             <label>
                 Nome:
                 <input type="text" name="nome" id="nome" value="<?= $nome ?>"> <!-- value="Cesto de Roupa" -->
@@ -55,6 +61,7 @@
                 <img src="img/no-image.png" alt="Imagem Selecionada" id="preview">
                 <div>Click para escolher uma imagem</div>
                 <input type="file" name="foto" id="foto" >
+                <?php if (!$fotoOk): ?> <span class="errorUpload">Selecione um arquivo válido</span> <?php endif; ?>
             </label>
 
             <div class="controles">
