@@ -1,1 +1,2 @@
-[1,2,3,4,{"id":1,"nome":"Camiseta Motor Head","preco":"55","desc":"dghatg","foto":"5ef153c28c759-Screenshot from 2020-05-22 20-43-51.png"},{"id":2,"nome":"Igor","preco":"30000","desc":"rgtdrgd","foto":"5ef15499085eb-Screenshot from 2020-06-03 11-12-34.png"}]
+[{"id":1,"nome":"Camiseta Motor Head","preco":"55","desc":"dghatg","foto":"5ef153c28c759-Screenshot from 2020-05-22 20-43-51.png"},
+    {"id":2,"nome":"Igor","preco":"30000","desc":"rgtdrgd","foto":"5ef15499085eb-Screenshot from 2020-06-03 11-12-34.png"}]

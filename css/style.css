@@ -116,7 +116,13 @@ button:hover{
 }
 
 .fileContainer div{
-    
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    color: white;
 }
 
 .fileContainer .errorUpload{
@@ -127,4 +133,30 @@ button:hover{
     background-color: rgba(0, 0, 0, 0.3);
     width: 100%;
     color: #FFFF00;
+}
+
+table{
+    width: 960px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid rgb(31, 0, 59);
+}
+
+table td{
+    padding: 5px;
+}
+
+table thead td{
+    background-color: rgb(31, 0, 59);
+}
+
+table tbody tr:nth-child(even) td{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+a{
+    color: white;
 }

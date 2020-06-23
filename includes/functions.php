@@ -38,8 +38,6 @@ function addProduto($nome, $preco, $desc, $tmpFoto, $userFoto){
         $novoId = $ultimoProduto['id'] + 1;
     }
 
-    
-
     // Criando o elemento $produto
     $produto = [
         "id" => $novoId,
