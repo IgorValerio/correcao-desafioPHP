@@ -5,6 +5,7 @@
 
     //Trazendo funções validadoras para dentro desse script
     include("includes/validadores.php");
+    include("includes/functions.php");
 
     //Definindo variaveis de validação
     $nomeOk = true;
@@ -30,7 +31,13 @@
         //Perguntando se os campos estão ok
         if ($nomeOk && $precoOk && $fotoOk) {
             
-            die('Ok! Tudo certo para salvar o produto');
+            $tmpName = $_FILES['foto']['tmp_name'];
+            $userName = $_FILES['foto']['name'];
+
+            addProduto($nome, $preco, $_POST['desc'], $tmpName, $userName);
+
+            $nome = "";
+            $preco = "";
 
         }
     }
